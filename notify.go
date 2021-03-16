@@ -54,13 +54,10 @@ type Attachment struct {
     Text          string `json:"text,omitempty"`
     ImageURL      string `json:"image_url,omitempty"`
     ThumbURL      string `json:"thumb_url,omitempty"`
-    // Fields and actions are not defined.
     MarkdownIn []string    `json:"mrkdwn_in,omitempty"`
     Ts         json.Number `json:"ts,omitempty"`
 }
 
-// SendSlackNotification will post to an 'Incoming Webook' url setup in Slack Apps. It accepts
-// some text and the slack channel is saved within Slack.
 func (sc SlackClient) SendSlackNotification(sr SimpleSlackRequest) error {
     slackRequest := SlackMessage{
         Text:      sr.Text,
@@ -133,7 +130,7 @@ func (sc SlackClient) sendHttpRequest(slackRequest SlackMessage) error {
         return err
     }
     if buf.String() != "ok" {
-        return errors.New("Non-ok response returned from Slack")
+        return errors.New("Your Random Keyword Not Working")
     }
     return nil
 }
