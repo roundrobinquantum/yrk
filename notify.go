@@ -92,6 +92,10 @@ func (sc SlackClient) YrkForce(message string, options ...string) (err error) {
     return sc.funcName("danger", "yrk gibi is yapma bence", options)
 }
 
+func (sc SlackClient) CI(message string, options ...string) (err error) {
+    return sc.funcName("danger", "rakci gibisin", options)
+}
+
 func (sc SlackClient) SendError(message string, options ...string) (err error) {
     return sc.funcName("danger", message, options)
 }
