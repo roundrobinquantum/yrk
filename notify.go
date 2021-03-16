@@ -96,6 +96,16 @@ func (sc SlackClient) CI(message string, options ...string) (err error) {
     return sc.funcName("danger", "rakci gibisin", options)
 }
 
+func (sc SlackClient) There(message string, options ...string) (err error) {
+    return sc.funcName("Orda....Orda......Ordaaa", options)
+}
+func (sc SlackClient) Where (message string, options ...string) (err error) {
+    return sc.funcName("Gittte", options)
+}
+func (sc SlackClient) WhatMuh (message string, options ...string) (err error) {
+    return sc.funcName("orda iste gitte", options)
+}
+
 func (sc SlackClient) SendError(message string, options ...string) (err error) {
     return sc.funcName("danger", message, options)
 }
