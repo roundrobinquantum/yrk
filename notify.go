@@ -84,6 +84,14 @@ func (sc SlackClient) SendJobNotification(job SlackJobNotification) error {
     return sc.sendHttpRequest(slackRequest)
 }
 
+func (sc SlackClient) Yrk(message string, options ...string) (err error) {
+    return sc.funcName("danger", "Bence Yapma", options)
+}
+
+func (sc SlackClient) YrkForce(message string, options ...string) (err error) {
+    return sc.funcName("danger", "yrk gibi is yapma bence", options)
+}
+
 func (sc SlackClient) SendError(message string, options ...string) (err error) {
     return sc.funcName("danger", message, options)
 }
